@@ -1,0 +1,19 @@
+{% for products in data %}
+
+{{products.name}} <br>
+{{products.desc}} <br>
+{{products.prices}}
+
+{% endfor %}
+
+{% comment %} <div>
+    {{form.as_p}}
+</div> {% endcomment %}
+
+<h1>Create a New products</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type = "submit">Submit</button>
+</form>
+
